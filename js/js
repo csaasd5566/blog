@@ -1,0 +1,49 @@
+let text_h1=document.querySelector(".text_h1");
+let fadeAndMove = [
+    {
+    opacity: 0,
+    transform: `translateY(-20px)`,
+    },
+    {
+    opacity: 1,
+    transform: `translateY(0px)`,
+    },
+];
+let titleTiming = {
+    duration: 2000,
+    easing: "ease-in-out",
+};
+text_h1.animate(fadeAndMove,titleTiming);
+
+$(".about-me").click(function(){
+    //alert(id);
+        var target_top = $(".about-me2").offset().top;
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body');
+        $body.animate({
+            scrollTop:target_top
+        },1000)
+        
+})
+$(function(){
+    $(window).scroll(function () {
+        var scrollVal = $(this).scrollTop();
+        if(scrollVal>=400){
+            $(function(){
+                $("#text_h1").fadeIn();
+                $(".about-me2 p").fadeIn();
+            })
+        }
+    });
+})
+$(function(){
+    var allimg=document.getElementsByClassName("a-img");
+    var time=500;
+    for(var img of allimg){
+        $(img).animate({
+            "height":"50px",
+            "font-size":"35px",
+            "transition":"0.5s"
+        },time);
+        time+=200; 
+    }
+})
