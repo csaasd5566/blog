@@ -37,13 +37,13 @@ $(function(){
 })
 $(function(){
     var allimg=document.getElementsByClassName("a-img");
-    var time=500;
     for(var img of allimg){
-        $(img).animate({
+        $(img).css({
             "height":"50px",
             "font-size":"35px",
-            "transition":"0.5s"
-        },time);
-        time+=200; 
+            "transition":"0.5s",
+            "overflow":"hidden"
+        });
     }
 })
+

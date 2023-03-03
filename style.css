@@ -119,7 +119,7 @@ a.a-img:active {color:#ffffff;}  /* 鼠标点击时 */
     margin: 5px; 
 }
 .a-img:hover{
-    background-color: mediumaquamarine;  
+    background-color: mediumaquamarine;
 }
 .a-img img{    
     width: 40px;
