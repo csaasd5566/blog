@@ -64,6 +64,10 @@ if(width>=720){
     for(allimg of img){
         allimg.style="width:30px";
     }
+    var alignmiddle=document.querySelector(".align-middle");
+    alignmiddle.style="width:345px;left:135%";
+    var imginside=document.querySelector(".img-inside");
+    imginside.style="width:300px";
     setTimeout(function(){
         var allimg=document.getElementsByClassName("a-img");
         for(var img of allimg){
@@ -81,14 +85,14 @@ if(width>=720){
                 "transition":"0.5s",
                 "overflow":"hidden",
                 "vertical-align": "center",
-                "margin":"10px 40%"
+                "margin":"10px 10% 10px 30%"
             });
         }
         var h1=document.querySelector("#text_h1");
         h1.style="font-size:4rem";
         var p=document.querySelectorAll(".about-me2 p");
         for(var allp of p){
-            allp.style="font-size:20px";
+            allp.style="font-size:20px;padding:3px";
         }
     },1500)
 }
