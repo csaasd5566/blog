@@ -1,20 +1,19 @@
 let text_h1=document.querySelector(".text_h1");
-let fadeAndMove = [
-    {
-    opacity: 0,
-    transform: `translateY(-20px)`,
-    },
-    {
-    opacity: 1,
-    transform: `translateY(0px)`,
-    },
-];
-let titleTiming = {
-    duration: 2000,
-    easing: "ease-in-out",
-};
-text_h1.animate(fadeAndMove,titleTiming);
-
+    let fadeAndMove = [
+        {
+        opacity: 0,
+        transform: `translateY(-20px)`,
+        },
+        {
+        opacity: 1,
+        transform: `translateY(0px)`,
+        },
+    ];
+    let titleTiming = {
+        duration: 1500,
+        easing: "ease-in-out",
+    };
+    text_h1.animate(fadeAndMove,titleTiming);
 $(".about-me").click(function(){
     //alert(id);
         var target_top = $(".about-me2").offset().top;
@@ -35,15 +34,61 @@ $(function(){
         }
     });
 })
-$(function(){
-    var allimg=document.getElementsByClassName("a-img");
-    for(var img of allimg){
-        $(img).css({
-            "height":"50px",
-            "font-size":"35px",
-            "transition":"0.5s",
-            "overflow":"hidden"
-        });
+let width = window.innerWidth;
+console.log(width);
+if(width>=720){
+    setTimeout(function(){
+        var allimg=document.getElementsByClassName("a-img");
+        for(var img of allimg){
+            $(img).css({
+                
+                "height":"50px",
+                "font-size":"35px",
+                "transition":"0.5s",
+                "overflow":"hidden"
+            });
+        }
+    },1500)
+}else if(width>=320 && width<=720){
+    var texth1 = document.querySelector(".text_h1");
+    text_h1.style="font-size:3rem";
+    var navigation = document.querySelector(".navigation");
+    navigation.style="font-size:15px";
+    var blog=document.querySelector(".blog");
+    blog.style="width: 100px";
+    var aboutme=document.querySelector(".about-me");
+    aboutme.style="width: 100px;right: 100px";
+    var home=document.querySelector(".home");
+    home.style="width: 150px";
+    var img=document.querySelectorAll(".a-img img");
+    for(allimg of img){
+        allimg.style="width:30px";
     }
-})
-
+    setTimeout(function(){
+        var allimg=document.getElementsByClassName("a-img");
+        for(var img of allimg){
+            $(img).css({
+                "margin":"10px 40%"
+            })
+        }
+        for(var img of allimg){ 
+            $(img).css({
+                "display":"flex",
+                "justify-content":"left",
+                "align-items": "center",
+                "height":"40px",
+                "font-size":"25px",
+                "transition":"0.5s",
+                "overflow":"hidden",
+                "vertical-align": "center",
+                "margin":"10px 40%"
+            });
+        }
+        var h1=document.querySelector("#text_h1");
+        h1.style="font-size:4rem";
+        var p=document.querySelectorAll(".about-me2 p");
+        for(var allp of p){
+            allp.style="font-size:20px";
+        }
+    },1500)
+}
