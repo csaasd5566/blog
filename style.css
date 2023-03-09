@@ -85,16 +85,16 @@ a.blog:active {color:#ffffff;}  /* 鼠标点击时 */
     left:0%;   
 }
 .align-middle {      
-    width: 1000px;   
+    width: 100%;   
     height:500px; 
     position: absolute;
     top: 50%;
-    left: 50%;   
-    margin: -150px 0 0 -500px;
+    transform: translateY(-30%)   ;
+    
     text-align: center;
 }
 .img-inside{
-    width: 1000px;   
+    width: 100%;   
     height:200px;
     text-align: center;
 }
