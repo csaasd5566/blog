@@ -1,19 +1,30 @@
-let text_h1=document.querySelector(".text_h1");
-    let fadeAndMove = [
-        {
-        opacity: 0,
-        transform: `translateY(-20px)`,
-        },
-        {
-        opacity: 1,
-        transform: `translateY(0px)`,
-        },
-    ];
-    let titleTiming = {
-        duration: 1500,
-        easing: "ease-in-out",
-    };
-    text_h1.animate(fadeAndMove,titleTiming);
+$(document).ready(function () {
+    setTimeout(function(){
+       $(".ring").fadeOut()
+    },1500)
+    setTimeout(function(){
+        $(".text_h1").fadeIn(1000);
+     },1700)
+    
+});
+
+// let text_h1=document.querySelector(".text_h1");
+// let fadeAndMove = [
+//     {
+//     opacity: 0,
+//     transform: `translateY(-20px)`,
+//     },
+//     {
+//     opacity: 1,
+//     transform: `translateY(0px)`,
+//     },
+// ];
+// let titleTiming = {
+//     duration: 1500,
+//     easing: "ease-in-out",
+// };
+// text_h1.animate(fadeAndMove,titleTiming);
+    
 $(".about-me").click(function(){
     //alert(id);
         var target_top = $(".about-me2").offset().top;
@@ -48,7 +59,7 @@ if(width>=720){
                 "overflow":"hidden"
             });
         }
-    },1500)
+    },3200)
 }else if(width<=720){
     var texth1 = document.querySelector(".text_h1");
     text_h1.style="font-size:3rem";
@@ -94,5 +105,5 @@ if(width>=720){
         for(var allp of p){
             allp.style="font-size:20px;padding:3px";
         }
-    },1500)
+    },3200)
 }
